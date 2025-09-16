@@ -1,0 +1,14 @@
+{% extends 'planner/base.html' %}
+{% block title %}Home · travelBuddy{% endblock %}
+{% block content %}
+  <div class="card">
+    <div class="badge">New</div>
+    <h1 class="section-title">travelBuddy — Plan your trip in minutes with AI</h1>
+    <p class="kicker">Smart, fast itineraries tailored to you.</p>
+    <div style="margin-top:12px">
+      <a class="btn btn-primary" href="{% url 'planner:choose_plan' %}">Start planning</a>
+    </div>
+  </div>
+{% endblock %}
+
+
