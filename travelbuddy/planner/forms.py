@@ -68,6 +68,12 @@ class TravelerForm(forms.ModelForm):
     class Meta:
         model = Traveler
         fields = ['age', 'gender', 'interests', 'disabilities_allergies']
+        labels = {
+            'disabilities_allergies': 'Disabilities / allergies (optional)'
+        }
+        widgets = {
+            'disabilities_allergies': forms.Textarea(attrs={'placeholder': 'If any'})
+        }
 
     # Revert: default model choices (Male/Female/Other) and no size overrides
 

@@ -1,9 +1,14 @@
 {% extends 'planner/base.html' %}
+{% load static %}
 {% block title %}Home · travelBuddy{% endblock %}
+{% block brand_logo %}
+  <a href="{% url 'planner:home' %}" class="brand" aria-label="TravelBuddy home">
+    <img src="{% static 'planner/logo-travelbuddy.png' %}" alt="TravelBuddy" class="logo-img"/>
+  </a>
+{% endblock %}
 {% block content %}
-  <div class="card">
-    <div class="badge">New</div>
-    <h1 class="section-title">travelBuddy — Plan your trip in minutes with AI</h1>
+  <div class="card card--hero hero-home">
+    <h1 class="section-title">Plan your trip in minutes with AI</h1>
     <p class="kicker">Smart, fast itineraries tailored to you.</p>
     <div style="margin-top:12px">
       <a class="btn btn-primary" href="{% url 'planner:choose_plan' %}">Start planning</a>

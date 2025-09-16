@@ -9,7 +9,11 @@
 </head>
 <body>
   <header class="header">
-    <a href="{% url 'planner:home' %}" class="brand">travelBuddy</a>
+    {% block brand_logo %}
+      <a href="{% url 'planner:home' %}" class="brand" aria-label="TravelBuddy home">
+        <img src="{% static 'planner/logo-travelbuddy.png' %}" alt="TravelBuddy" class="logo-img"/>
+      </a>
+    {% endblock %}
   </header>
   <main class="container">
     {% block content %}{% endblock %}

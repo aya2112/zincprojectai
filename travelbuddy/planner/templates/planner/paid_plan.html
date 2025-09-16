@@ -1,7 +1,7 @@
 {% extends 'planner/base.html' %}
 {% block title %}Pro plan · travelBuddy{% endblock %}
 {% block content %}
-  <h2 class="section-title">Pro (Paid) plan</h2>
+  <h2 class="section-title">Pro plan</h2>
   <form method="post" class="grid">
     {% csrf_token %}
     <div class="card">
@@ -77,7 +77,7 @@
               {{ f.interests }}
             </div>
             <div>
-              <label class="label">Disabilities / allergies</label>
+              <label class="label">Disabilities / allergies (optional)</label>
               {{ f.disabilities_allergies }}
             </div>
           </div>
@@ -105,8 +105,8 @@
             <textarea name="trav-__index__-interests"></textarea>
           </div>
           <div>
-            <label class="label">Disabilities / allergies</label>
-            <textarea name="trav-__index__-disabilities_allergies"></textarea>
+            <label class="label">Disabilities / allergies (optional)</label>
+            <textarea name="trav-__index__-disabilities_allergies" placeholder="If any"></textarea>
           </div>
         </div>
       </div>
